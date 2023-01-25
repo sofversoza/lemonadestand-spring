@@ -1,5 +1,6 @@
 package com.cooksys.lemonadestand.entities;
 
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -10,8 +11,7 @@ import java.util.List;
 @Table(name="order_table")  // Annotation for renaming order bc its a reserved keyword in SQL
 @Entity                     // @Entity Annotation to tell SpringBoot that this Order class is an Entity (an object that maps to a DB table)
 @NoArgsConstructor          // Lombok Annotation instead of generating boiler plates for NoArgsConstructors & Setters & Getters for following JavaBean convention
-@Getter
-@Setter
+@Data                       // generates Getters & Setters, toString, .equals, hashCode
 public class Order {
 
     @Id

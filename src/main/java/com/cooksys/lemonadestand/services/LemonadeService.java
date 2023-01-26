@@ -1,6 +1,7 @@
 package com.cooksys.lemonadestand.services;
 
-import com.cooksys.lemonadestand.entities.Lemonade;
+import com.cooksys.lemonadestand.model.LemonadeRequestDto;
+import com.cooksys.lemonadestand.model.LemonadeResponseDto;
 
 import java.util.List;
 
@@ -14,7 +15,9 @@ import java.util.List;
 */
 public interface LemonadeService {
 
-    List<Lemonade> getAllLemonades();
+    List<LemonadeResponseDto> getAllLemonades();
 
-    Lemonade createLemonade(Lemonade lemonade);
+
+    // takes a LemonadeRequestDto, creates it in the DB, returns a LemonadeResponseDto
+    LemonadeResponseDto createLemonade(LemonadeRequestDto lemonadeRequestDto);
 }
